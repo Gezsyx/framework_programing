@@ -51,7 +51,7 @@ export class BooksService {
       author: dto.author,
       isbn: dto.isbn,
       publishedYear: dto.publishedYear,
-      isAvailable: true,
+      isAvailable: dto.isAvailable,
     };
     this.books.push(newBook);
     return newBook;
