@@ -12,6 +12,6 @@ export class CategoriesController {
 
   @Get('/:id')
   findById(@Param('id') id: string) {
-    return this.categoriesService.findById(parseInt(id));
+    return this.categoriesService.findById(id);
   }
 }

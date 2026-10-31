@@ -1,4 +1,10 @@
-import { IsBoolean, IsInt, IsNotEmpty, IsString } from 'class-validator';
+import {
+  IsBoolean,
+  IsInt,
+  IsNotEmpty,
+  IsString,
+  IsUUID,
+} from 'class-validator';
 
 export class CreateBookDto {
   @IsNotEmpty({ message: 'Title is required' })
@@ -20,4 +26,8 @@ export class CreateBookDto {
   @IsNotEmpty({ message: 'Availability status is required' })
   @IsBoolean({ message: 'Availability status must be a boolean' })
   readonly isAvailable: boolean;
+
+  @IsNotEmpty({ message: 'Category ID is required' })
+  @IsUUID('4', { message: 'Category ID must be a UUID' })
+  readonly category_id: string;
 }

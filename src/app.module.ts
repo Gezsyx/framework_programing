@@ -11,6 +11,9 @@ import Joi from 'joi';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UsersModule } from './users/users.module.js';
 import { OrdersModule } from './orders/orders.module.js';
+import { CustomersModule } from './customers/customers.module.js';
+import { CustomersAddressesModule } from './customers_addresses/customers_addresses.module.js';
+import { PublishersModule } from './publishers/publishers.module.js';
 
 @Module({
   imports: [
@@ -52,6 +55,12 @@ import { OrdersModule } from './orders/orders.module.js';
     UsersModule,
 
     OrdersModule,
+
+    CustomersModule,
+
+    CustomersAddressesModule,
+
+    PublishersModule,
   ],
   controllers: [AppController],
   providers: [AppService],
